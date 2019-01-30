@@ -30,12 +30,12 @@ public class InventoryTest {
         coffeeMaker = new CoffeeMaker();
         inventory = coffeeMaker.checkInventory();
     }
-    // User story - Add inventory; CoffeeMaker line 149
+    // User story - Add inventory; CoffeeMaker line 134
     @Test
     public void testAddInventoryWithPositiveSugar() {
         assertTrue(coffeeMaker.addInventory(0, 0, 5, 0));
     }
-    // CoffeeMaker line 185 + instead of -
+    // CoffeeMaker line 170 + instead of -
     @Test
     public void testMakeCoffeeCorrectIngredientsAfterwards() {
         Recipe espresso = new Recipe();
