@@ -89,11 +89,9 @@ public class CoffeeMaker implements CoffeeMaking, CoffeeService {
         if(r != null) {
 	        for(int i = 0; i < NUM_RECIPES; i++) {
 	            if(r.equals(recipeArray[i])) {
-//	                recipeArray[i] = recipeArray[i];
-//	                canDeleteRecipe = true;
-					recipeArray[i] = new Recipe();
-					recipeFull[i] = false;
-					canDeleteRecipe = true;
+			recipeArray[i] = new Recipe();
+			recipeFull[i] = false;
+			canDeleteRecipe = true;
 	            }
 	        }
         }
