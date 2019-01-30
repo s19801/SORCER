@@ -51,10 +51,4 @@ public class RecipeTest {
         assertTrue(coffeeMaker.deleteRecipe(espresso));
         assertTrue(coffeeMaker.addRecipe(espresso));
     }
-
-    @Test
-    public void testHandleNullRecipeName() {
-        Recipe r = coffeeMaker.getRecipeForName(null);
-        assertTrue(r == null);
-    }
 }
