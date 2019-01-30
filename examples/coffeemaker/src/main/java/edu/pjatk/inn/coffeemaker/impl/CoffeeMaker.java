@@ -97,22 +97,6 @@ public class CoffeeMaker implements CoffeeMaking, CoffeeService {
         }
         return canDeleteRecipe;
     }
-
-	/**
-	 * Returns true if the recipe were deleted from the
-	 * coffee maker
-	 * @return boolean
-	 */
-	public boolean deleteRecipes() {
-		boolean canDeleteRecipes = false;
-		for (int i = 0; i < NUM_RECIPES; i++) {
-			recipeArray[i] = new Recipe();
-			recipeFull[i] = false;
-			canDeleteRecipes = true;
-		}
-		return canDeleteRecipes;
-	}
-
     /**
      * Returns true if the recipe is successfully edited
      * @param oldRecipe
@@ -208,19 +192,6 @@ public class CoffeeMaker implements CoffeeMaking, CoffeeService {
      * @return Recipe
      */
 	public Recipe getRecipeForName(String name) {
-//		Recipe r = null;
-//		for(int i = 0; i < NUM_RECIPES; i++) {
-//			if(recipeArray[i].getName() != null) {
-//				if((recipeArray[i].getName()).equals(name)) {
-//					r = recipeArray[i];
-//				}
-//			}
-//		}
-//		return r;
-//		if (name == null) {
-//			return null;
-//		}
-
 		Recipe r = null;
 		for(int i = 0; i < NUM_RECIPES; i++) {
 			if(recipeArray[i].getName() != null) {
