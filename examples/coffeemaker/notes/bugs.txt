@@ -1,10 +1,13 @@
 1. W klasie coffeeMaker.java dla metody addInventory(int amtCoffee, int amtMilk, int amtSugar, int amtChocolate)
-nie mo¿na ustawiæ dodatniej wartoœci cukru(linia: 134)
+nie moÅ¼na ustawiÄ‡ dodatniej wartoÅ›ci cukru(linia: 134)
 
-2. W klasie coffeeMaker.java zmienna final int NUM_RECIPES wed³ug user stories powinna zawieraæ tylko 3 przepisy,
-a zosta³a ustawiona na 4(linia: 25)
+2. W klasie coffeeMaker.java zmienna final int NUM_RECIPES wedÅ‚ug user stories powinna zawieraÄ‡ tylko 3 przepisy,
+a zostaÅ‚a ustawiona na 4(linia: 25)
 
 3. W klasie coffeeMaker.java metoda deleteRecipe(Recipe r) nie usuwa poprawnie przepisu(line: 92 - 94)
 
 4. W klasie coffeeMaker.java metoda makeCoffe(Recipe r, int amtPaid) amtCoffee jest dodawana do inventory,
-a powinna byæ odejmowana(line: 170)
+a powinna byÄ‡ odejmowana(line: 170)
+
+5. W klasie coffeMaker.java metoda editRecipe(Recipe oldRecipe, Recipe newRecipe) metoda nie sprawdzaÅ‚a, czy nazwa nowego przepisu
+juÅ¼ wystÄ™puje, nadpisywaÅ‚a przepis o takiej samej nazwie jak newRecipe zamiast oldRecipe
