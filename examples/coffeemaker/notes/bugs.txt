@@ -10,4 +10,4 @@ a została ustawiona na 4(linia: 25)
 a powinna być odejmowana(line: 170)
 
 5. W klasie coffeMaker.java metoda editRecipe(Recipe oldRecipe, Recipe newRecipe) metoda nie sprawdzała, czy nazwa nowego przepisu
-już występuje, nadpisywała przepis o takiej samej nazwie jak newRecipe zamiast oldRecipe
+już występuje, nadpisywała przepis o takiej samej nazwie jak newRecipe zamiast oldRecipe(line:109 - 110)
