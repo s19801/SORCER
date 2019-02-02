@@ -13,8 +13,7 @@ import org.sorcer.test.SorcerTestRunner;
 import sorcer.service.ContextException;
 import sorcer.service.Exertion;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 import static sorcer.eo.operator.*;
 
 /**
@@ -119,6 +118,14 @@ public class CoffeeMakerTest {
 	public void makeCoffee() throws Exception {
 		coffeeMaker.addRecipe(espresso);
 		assertEquals(coffeeMaker.makeCoffee(espresso, 200), 150);
+	}
+
+	@Test
+	public void testEditRecipe() {
+		assertTrue(coffeeMaker.addRecipe(macchiato));
+		assertTrue(coffeeMaker.addRecipe(espresso));
+		assertFalse(coffeeMaker.editRecipe(espresso,macchiato));
+
 	}
 
 }

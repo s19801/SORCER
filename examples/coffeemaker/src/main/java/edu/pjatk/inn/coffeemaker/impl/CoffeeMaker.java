@@ -104,21 +104,21 @@ public class CoffeeMaker implements CoffeeMaking, CoffeeService {
      * @return boolean
      */
     public boolean editRecipe(Recipe oldRecipe, Recipe newRecipe) {
-        boolean canEditRecipe = false;
-        for(int i = 0; i < NUM_RECIPES; i++) {
-        	if(recipeArray[i].getName() != null) {
-	            if(newRecipe.equals(recipeArray[i])) {
-	            	recipeArray[i] = new Recipe();
-	            	if(addRecipe(newRecipe)) {
-	            		canEditRecipe = true;
-	            	} else {
-	            		//Unreachable line of code
-	            		canEditRecipe = false;
-	            	}
-	            }
-        	}
-        }
-        return canEditRecipe;
+		boolean canEditRecipe = false;
+		for (int i = 0; i < NUM_RECIPES; i++) {
+			if (recipeArray[i] != null && recipeArray[i].getName() != null) {
+				if (oldRecipe.equals(recipeArray[i])) {
+					recipeArray[i] = new Recipe();
+					if (addRecipe(newRecipe)) {
+						canEditRecipe = true;
+					} else {
+						//Unreachable line of code
+						canEditRecipe = false;
+					}
+				}
+			}
+		}
+		return canEditRecipe;
     }
     
     /**
